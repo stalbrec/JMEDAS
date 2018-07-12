@@ -2,18 +2,18 @@ from ROOT import *
 
 gROOT.Macro("rootlogon.C")
 
-f = TFile("ttjets_short_jec.root")
+f = TFile("ttbar_jec.root")
 
-h_ptAK4   = f.Get("h_ptAK4")
-h_ptAK4Up  = f.Get("h_ptUpAK4")
-h_ptAK4Down  = f.Get("h_ptDownAK4")
-h_ptAK4Up   .SetLineStyle(2)
-h_ptAK4Up   .SetLineColor(kGreen+1) 
-h_ptAK4Down   .SetLineStyle(2)
-h_ptAK4Down   .SetLineColor(kRed) 
-h_ptAK4Up     .SetLineWidth(2)
-h_ptAK4Down   .SetLineWidth(2)
-h_ptAK4       .SetLineWidth(2)
+h_ptAK4 = f.Get("h_ptAK4")
+h_ptAK4Up = f.Get("h_ptUpAK4")
+h_ptAK4Down = f.Get("h_ptDownAK4")
+h_ptAK4Up.SetLineStyle(2)
+h_ptAK4Up.SetLineColor(kAzure+1) 
+h_ptAK4Down.SetLineStyle(3)
+h_ptAK4Down.SetLineColor(kRed) 
+h_ptAK4Up.SetLineWidth(2)
+h_ptAK4Down.SetLineWidth(2)
+h_ptAK4.SetLineWidth(2)
 
 c = TCanvas('c', 'c')
 
