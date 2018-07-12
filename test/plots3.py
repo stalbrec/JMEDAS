@@ -16,5 +16,9 @@ c = TCanvas('c', 'c')
 h_areaAK4.Draw('hist')
 h_areaAK8.Draw("hist same")
 
+leg = gPad.BuildLegend(0.6, 0.5, 0.9, 0.7, "", "L")
+leg.Draw()
+
+
 c.Print('plots3.png', 'png')
 c.Print('plots3.pdf', 'pdf')
