@@ -2,10 +2,10 @@ from ROOT import *
 
 gROOT.Macro("rootlogon.C")
 
-f = TFile("qcd_lowPt.root")
+f = TFile("ttbar.root")
 
-h_areaAK4   = f.Get("h_areaAK4")
-h_areaAK8   = f.Get("h_areaAK8")
+h_areaAK4 = f.Get("h_areaAK4")
+h_areaAK8 = f.Get("h_areaAK8")
 h_areaAK8.SetLineStyle(4)
 h_areaAK8.SetLineColor(4)
 

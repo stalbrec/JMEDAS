@@ -2,27 +2,27 @@ from ROOT import *
 
 gROOT.Macro("rootlogon.C")
 
-f = TFile("qcd_lowPt.root")
+f = TFile("ttbar.root")
 
-h_ptAK4   = f.Get("h_ptAK4")
-h_etaAK4  = f.Get("h_etaAK4")
-h_phiAK4  = f.Get("h_phiAK4")
-h_mAK4    = f.Get("h_mAK4")
+h_ptAK4 = f.Get("h_ptAK4")
+h_etaAK4 = f.Get("h_etaAK4")
+h_phiAK4 = f.Get("h_phiAK4")
+h_mAK4 = f.Get("h_mAK4")
 
-h_ptAK4Gen   = f.Get("h_ptAK4Gen")
-h_etaAK4Gen  = f.Get("h_etaAK4Gen")
-h_phiAK4Gen  = f.Get("h_phiAK4Gen")
-h_mAK4Gen    = f.Get("h_mAK4Gen")
+h_ptAK4Gen = f.Get("h_ptAK4Gen")
+h_etaAK4Gen = f.Get("h_etaAK4Gen")
+h_phiAK4Gen = f.Get("h_phiAK4Gen")
+h_mAK4Gen = f.Get("h_mAK4Gen")
 
-h_ptAK4Gen   .SetLineStyle(2) 
-h_etaAK4Gen  .SetLineStyle(2) 
-h_phiAK4Gen  .SetLineStyle(2) 
-h_mAK4Gen    .SetLineStyle(2) 
+h_ptAK4Gen.SetLineStyle(2) 
+h_etaAK4Gen.SetLineStyle(2) 
+h_phiAK4Gen.SetLineStyle(2) 
+h_mAK4Gen.SetLineStyle(2) 
 
-h_ptAK4Gen   .SetLineColor(2) 
-h_etaAK4Gen  .SetLineColor(2) 
-h_phiAK4Gen  .SetLineColor(2) 
-h_mAK4Gen    .SetLineColor(2)
+h_ptAK4Gen.SetLineColor(2) 
+h_etaAK4Gen.SetLineColor(2) 
+h_phiAK4Gen.SetLineColor(2) 
+h_mAK4Gen.SetLineColor(2)
 
 c = TCanvas('c', 'c', 600, 800)
 

@@ -2,7 +2,7 @@ from ROOT import *
 
 gROOT.Macro("rootlogon.C")
 
-f = TFile("qcd_short.root")
+f = TFile("ttbar.root")
 
 h_ptAK4   = f.Get("h_ptAK4")
 h_etaAK4  = f.Get("h_etaAK4")
