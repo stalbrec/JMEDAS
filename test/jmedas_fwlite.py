@@ -1,12 +1,12 @@
 #! /usr/bin/env python
 
 
-## _________                _____.__                            __  .__               
-## \_   ___ \  ____   _____/ ____\__| ____  __ ______________ _/  |_|__| ____   ____  
-## /    \  \/ /  _ \ /    \   __\|  |/ ___\|  |  \_  __ \__  \\   __\  |/  _ \ /    \ 
+## _________                _____.__                            __  .__
+## \_   ___ \  ____   _____/ ____\__| ____  __ ______________ _/  |_|__| ____   ____
+## /    \  \/ /  _ \ /    \   __\|  |/ ___\|  |  \_  __ \__  \\   __\  |/  _ \ /    \
 ## \     \___(  <_> )   |  \  |  |  / /_/  >  |  /|  | \// __ \|  | |  (  <_> )   |  \
 ##  \______  /\____/|___|  /__|  |__\___  /|____/ |__|  (____  /__| |__|\____/|___|  /
-##         \/            \/        /_____/                   \/                    \/ 
+##         \/            \/        /_____/                   \/                    \/
 
 from optparse import OptionParser
 parser = OptionParser()
@@ -88,12 +88,12 @@ parser.add_option('--xrootd', type='string', action='store',
 argv = []
 
 
-## _____________      __.____    .__  __             _________ __          _____  _____ 
+## _____________      __.____    .__  __             _________ __          _____  _____
 ## \_   _____/  \    /  \    |   |__|/  |_  ____    /   _____//  |_ __ ___/ ____\/ ____\
-##  |    __) \   \/\/   /    |   |  \   __\/ __ \   \_____  \\   __\  |  \   __\\   __\ 
-##  |     \   \        /|    |___|  ||  | \  ___/   /        \|  | |  |  /|  |   |  |   
-##  \___  /    \__/\  / |_______ \__||__|  \___  > /_______  /|__| |____/ |__|   |__|   
-##      \/          \/          \/             \/          \/                           
+##  |    __) \   \/\/   /    |   |  \   __\/ __ \   \_____  \\   __\  |  \   __\\   __\
+##  |     \   \        /|    |___|  ||  | \  ___/   /        \|  | |  |  /|  |   |  |
+##  \___  /    \__/\  / |_______ \__||__|  \___  > /_______  /|__| |____/ |__|   |__|
+##      \/          \/          \/             \/          \/
 
 import ROOT
 import sys
@@ -119,10 +119,10 @@ if options.smearJets and options.isData :
     print 'Misconfiguration. I cannot access generator-level jets on data. Not smearing jets.'
     options.smearJets = False
 
-if options.correctJets : 
+if options.correctJets :
     ### JEC implementation
 
-    if not options.isData : 
+    if not options.isData :
         vPar = ROOT.vector(ROOT.JetCorrectorParameters)()
         vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_L1FastJet_AK4PFchs.txt') )
         vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_L2Relative_AK4PFchs.txt') )
@@ -156,10 +156,10 @@ if options.correctJets :
         jecUncAK8 = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_Uncertainty_AK8Puppi.txt' )
 
 
-##   ___ ___ .__          __                                             
+##   ___ ___ .__          __
 ##  /   |   \|__| _______/  |_  ____   ________________    _____   ______
 ## /    ~    \  |/  ___/\   __\/  _ \ / ___\_  __ \__  \  /     \ /  ___/
-## \    Y    /  |\___ \  |  | (  <_> ) /_/  >  | \// __ \|  Y Y  \\___ \ 
+## \    Y    /  |\___ \  |  | (  <_> ) /_/  >  | \// __ \|  Y Y  \\___ \
 ##  \___|_  /|__/____  > |__|  \____/\___  /|__|  (____  /__|_|  /____  >
 ##        \/         \/             /_____/            \/      \/     \/
 
@@ -272,12 +272,12 @@ varTree.Branch('ak8_N3_beta1', ak8_N3_beta1, 'ak8_N3_beta1/F')
 varTree.Branch('ak8_N3_beta2', ak8_N3_beta2, 'ak8_N3_beta2/F')
 varTree.Branch('npv', npv, 'npv/F')
 
-##      ____.       __    __________                    .__          __  .__               
-##     |    | _____/  |_  \______   \ ____   __________ |  |  __ ___/  |_|__| ____   ____  
-##     |    |/ __ \   __\  |       _// __ \ /  ___/  _ \|  | |  |  \   __\  |/  _ \ /    \ 
+##      ____.       __    __________                    .__          __  .__
+##     |    | _____/  |_  \______   \ ____   __________ |  |  __ ___/  |_|__| ____   ____
+##     |    |/ __ \   __\  |       _// __ \ /  ___/  _ \|  | |  |  \   __\  |/  _ \ /    \
 ## /\__|    \  ___/|  |    |    |   \  ___/ \___ (  <_> )  |_|  |  /|  | |  (  <_> )   |  \
 ## \________|\___  >__|    |____|_  /\___  >____  >____/|____/____/ |__| |__|\____/|___|  /
-##               \/               \/     \/     \/                                      \/ 
+##               \/               \/     \/     \/                                      \/
 def getJER(jetEta, sysType) :
     """
     Here, jetEta should be the jet pseudorapidity, and sysType is :
@@ -295,9 +295,9 @@ def getJER(jetEta, sysType) :
     # Values from https://twiki.cern.ch/twiki/bin/view/CMS/JetResolution
     etamin = [0.0,0.5,0.8,1.1,1.3,1.7,1.9,2.1,2.3,2.5,2.8,3.0,3.2]
     etamax = [0.5,0.8,1.1,1.3,1.7,1.9,2.1,2.3,2.5,2.8,3.0,3.2,5.0]
-    
+
     scale_nom = [1.109,1.138,1.114,1.123,1.084,1.082,1.140,1.067,1.177,1.364,1.857,1.328,1.16]
-    scale_unc = [0.008,0.013,0.013,0.024,0.011,0.035,0.047,0.053,0.041,0.039,0.071,0.022,0.029] 
+    scale_unc = [0.008,0.013,0.013,0.024,0.011,0.035,0.047,0.053,0.041,0.039,0.071,0.022,0.029]
 
 
     for iSF in range(0,len(scale_nom)) :
@@ -314,29 +314,28 @@ def getJER(jetEta, sysType) :
 
 
 
-## ___________                    __    .____                         
-## \_   _____/__  __ ____   _____/  |_  |    |    ____   ____ ______  
-##  |    __)_\  \/ // __ \ /    \   __\ |    |   /  _ \ /  _ \\____ \ 
+## ___________                    __    .____
+## \_   _____/__  __ ____   _____/  |_  |    |    ____   ____ ______
+##  |    __)_\  \/ // __ \ /    \   __\ |    |   /  _ \ /  _ \\____ \
 ##  |        \\   /\  ___/|   |  \  |   |    |__(  <_> |  <_> )  |_> >
-## /_______  / \_/  \___  >___|  /__|   |_______ \____/ \____/|   __/ 
-##         \/           \/     \/               \/            |__|    
+## /_______  / \_/  \___  >___|  /__|   |_______ \____/ \____/|   __/
+##         \/           \/     \/               \/            |__|
 
 
 # IMPORTANT : Run one FWLite instance per file. Otherwise,
 # FWLite aggregates ALL of the information immediately, which
-# can take a long time to parse. 
-filelist = file( options.files )
-filesraw = filelist.readlines()
+# can take a long time to parse.
 files = []
-nevents = 0
-for ifile in filesraw :
-    if len( ifile ) > 2 : 
-        s = 'root://' + options.xrootd + '/' + ifile.rstrip()
+with open(options.files) as filelist:
+    for line in filelist:
+        if len(line) <= 2:
+            continue
+        s = 'root://' + options.xrootd + '/' + line.rstrip()
         files.append( s )
         print 'Added ' + s
 
-
 # loop over files
+nevents = 0
 for ifile in files :
     print 'Processing file ' + ifile
     events = Events (ifile)
@@ -353,13 +352,13 @@ for ifile in files :
 
         if i % 1000 == 0 :
             print '    ---> Event ' + str(i)
-        
-        ##    _____   ____  __.  _____        ____.       __    __________.__          __          
+
+        ##    _____   ____  __.  _____        ____.       __    __________.__          __
         ##   /  _  \ |    |/ _| /  |  |      |    | _____/  |_  \______   \  |   _____/  |_  ______
         ##  /  /_\  \|      <  /   |  |_     |    |/ __ \   __\  |     ___/  |  /  _ \   __\/  ___/
-        ## /    |    \    |  \/    ^   / /\__|    \  ___/|  |    |    |   |  |_(  <_> )  |  \___ \ 
+        ## /    |    \    |  \/    ^   / /\__|    \  ___/|  |    |    |   |  |_(  <_> )  |  \___ \
         ## \____|__  /____|__ \____   |  \________|\___  >__|    |____|   |____/\____/|__| /____  >
-        ##         \/        \/    |__|                \/                                       \/ 
+        ##         \/        \/    |__|                \/                                       \/
 
 
         # get rho and vertices for JEC
@@ -383,15 +382,15 @@ for ifile in files :
             if ijet >= options.maxjets :
                 break
             if jet.pt() > options.minAK4Pt and abs(jet.rapidity()) < options.maxAK4Rapidity :
-                
-                
+
+
                 #Find the jet correction
                 uncorrJet = copy.copy( jet.correctedP4(0) ) # For some reason, in python this is interfering with jet.genJet() in strange ways without the copy.copy
 
                 if uncorrJet.E() < 0.00001 :
                     print 'Very strange. Uncorrected jet E = ' + str( uncorrJet.E()) + ', but Corrected jet E = ' + str( jet.energy() )
                     continue
-                    
+
                 # Apply loose jet ID to uncorrected jet  https://twiki.cern.ch/twiki/bin/view/CMS/JetID13TeVRun2016
                 # the folling is valid only for eta < 2.4. see twiki for full definition
                 nhf = jet.neutralHadronEnergy() / uncorrJet.E()
@@ -421,7 +420,7 @@ for ifile in files :
                 # Get the smeared jets for jet resolution
                 if options.smearJets  :
                     genJet = jet.genJet()
-                    if genJet != None : 
+                    if genJet != None :
                         smear = getJER(jet.eta(), 0) #JER nominal=0, up=+1, down=-1
                         smearUp = getJER(jet.eta(), 1) #JER nominal=0, up=+1, down=-1
                         smearDn = getJER(jet.eta(), -1) #JER nominal=0, up=+1, down=-1
@@ -438,7 +437,7 @@ for ifile in files :
                         corrDn *= ptsmearDn
 
                 # Get the latest, greatest jet corrections
-                if options.correctJets : 
+                if options.correctJets :
                     jec.setJetEta( uncorrJet.eta() )
                     jec.setJetPt ( uncorrJet.pt() )
                     jec.setJetE  ( uncorrJet.energy() )
@@ -474,11 +473,11 @@ for ifile in files :
                 h_mAK4.Fill( jet.mass() )
                 h_areaAK4.Fill( jet.jetArea() )
                 ak8pt[0] = -999.
-		ak4mass[0] = jet.mass()
-		ak4pt[0] = jet.pt()
-		varTree.Fill()
+                ak4mass[0] = jet.mass()
+                ak4pt[0] = jet.pt()
+                varTree.Fill()
 
-		genJet = jet.genJet()
+                genJet = jet.genJet()
                 if genJet != None :
                     h_ptAK4Gen.Fill( genJet.pt() )
                     h_etaAK4Gen.Fill( genJet.eta() )
@@ -486,7 +485,7 @@ for ifile in files :
                     h_phiAK4Gen.Fill( genJet.phi() )
                     h_mAK4Gen.Fill( genJet.mass() )
                     h_areaAK4Gen.Fill( genJet.jetArea() )
-                if options.verbose == True : 
+                if options.verbose == True :
                     print ("Jet {0:4.0f}, orig pt = {1:10.2f}, eta = {2:6.2f}, phi = {3:6.2f}, m = {4:6.2f}, " +
                            "nda = {5:3.0f}, vtxmass = {6:6.2f}, area = {7:6.2f}, corr = {8:6.3f} +{9:6.3f} -{10:6.3f} ").format(
                         ijet, jet.pt(), jet.eta(), jet.phi(), jet.mass(), jet.numberOfDaughters(), jet.userFloat('vtxMass'),
@@ -499,12 +498,12 @@ for ifile in files :
             ijet += 1
 
 
-        ##    _____   ____  __. ______        ____.       __    __________.__          __          
+        ##    _____   ____  __. ______        ____.       __    __________.__          __
         ##   /  _  \ |    |/ _|/  __  \      |    | _____/  |_  \______   \  |   _____/  |_  ______
         ##  /  /_\  \|      <  >      <      |    |/ __ \   __\  |     ___/  |  /  _ \   __\/  ___/
-        ## /    |    \    |  \/   --   \ /\__|    \  ___/|  |    |    |   |  |_(  <_> )  |  \___ \ 
+        ## /    |    \    |  \/   --   \ /\__|    \  ___/|  |    |    |   |  |_(  <_> )  |  \___ \
         ## \____|__  /____|__ \______  / \________|\___  >__|    |____|   |____/\____/|__| /____  >
-        ##         \/        \/      \/                \/                                       \/ 
+        ##         \/        \/      \/                \/                                       \/
         if options.verbose :
             print '------ AK8 jets ------'
         # use getByLabel, just like in cmsRun
@@ -519,7 +518,7 @@ for ifile in files :
             if ijet >= options.maxjets :
                 break
             if jet.pt() > options.minAK8Pt and abs(jet.rapidity()) < options.maxAK8Rapidity :
-                
+
                 #FInd the jet correction
                 uncorrJet = copy.copy( jet.correctedP4(0) ) # For some reason, in python this is interfering with jet.genJet() in strange ways without the copy.copy
 
@@ -552,7 +551,7 @@ for ifile in files :
                 # Get the smeared jets for jet resolution
                 if options.smearJets  :
                     genJet = jet.genJet()
-                    if genJet != None : 
+                    if genJet != None :
                         smear = getJER(jet.eta(), 0) #JER nominal=0, up=+1, down=-1
                         smearUp = getJER(jet.eta(), 1) #JER nominal=0, up=+1, down=-1
                         smearDn = getJER(jet.eta(), -1) #JER nominal=0, up=+1, down=-1
@@ -567,10 +566,10 @@ for ifile in files :
                         corr *= ptsmear
                         corrUp *= ptsmearUp
                         corrDn *= ptsmearDn
-                    
+
 
                 # Get the latest, greatest jet corrections
-                if options.correctJets : 
+                if options.correctJets :
                     jecAK8.setJetEta( uncorrJet.eta() )
                     jecAK8.setJetPt ( uncorrJet.pt() )
                     jecAK8.setJetE  ( uncorrJet.energy() )
@@ -609,34 +608,34 @@ for ifile in files :
                         L12cor = factors[1]
                     if factors.size() > 2:
                         L123cor = factors[2]
-                    
+
                     #calculate L2L3 correction (needed for correcting jet mass)
                     L2cor = L12cor/L1cor
                     L3cor = L123cor/L12cor
                     L23cor = L2cor*L3cor
-                    print 'L1cor '+str(L1cor)+' L2cor '+str(L2cor)+' L3cor '+str(L3cor)+' L23cor '+str(L23cor)+' L123cor '+str(L123cor)
+                    print 'AK8 JEC: L1cor '+str(L1cor)+' L2cor '+str(L2cor)+' L3cor '+str(L3cor)+' L23cor '+str(L23cor)+' L123cor '+str(L123cor)
 
                 subjets = jet.subjets("SoftDropPuppi")
                 groomedJet = None
                 rhoRatio = None
                 msubjet0 = -999.
                 msubjet1 = -999.
-		csv0 = -999.
-		csv1 = -999.                
-                if len(subjets) >= 2 : 
+                csv0 = -999.
+                csv1 = -999.
+                if len(subjets) >= 2 :
                     groomedJet = subjets[0].p4() + subjets[1].p4()
-                    if subjets[1].mass() > subjets[0].mass() : 
+                    if subjets[1].mass() > subjets[0].mass() :
                         msubjet0 = subjets[1].mass()
                         msubjet1 = subjets[0].mass()
-			csv0 = subjets[1].bDiscriminator('pfDeepCSVJetTags:probb')
-			csv1 = subjets[0].bDiscriminator('pfDeepCSVJetTags:probb')
+                        csv0 = subjets[1].bDiscriminator('pfDeepCSVJetTags:probb')
+                        csv1 = subjets[0].bDiscriminator('pfDeepCSVJetTags:probb')
                     else :
                         msubjet0 = subjets[0].mass()
                         msubjet1 = subjets[1].mass()
-			csv1 = subjets[1].bDiscriminator('pfDeepCSVJetTags:probb')
-			csv0 = subjets[0].bDiscriminator('pfDeepCSVJetTags:probb')
+                        csv1 = subjets[1].bDiscriminator('pfDeepCSVJetTags:probb')
+                        csv0 = subjets[0].bDiscriminator('pfDeepCSVJetTags:probb')
                     rhoRatio = pow( groomedJet.mass() / (groomedJet.pt()*0.8), 2)
-                
+
                 h_ptAK8.Fill( corr * jet.userFloat('ak8PFJetsCHSValueMap:pt') )
                 h_ptAK8Puppi.Fill( corr * uncorrJet.pt())
                 h_JECValueAK8.Fill( corr )
@@ -662,29 +661,29 @@ for ifile in files :
                 ak8PUPPIphi[0] = jet.phi()
                 ak8mass[0] = jet.userFloat('ak8PFJetsCHSValueMap:mass')
                 ak8csv[0] = jet.bDiscriminator('pfDeepCSVJetTags:probb')
-		ak8SDmass[0] = jet.userFloat('ak8PFJetsCHSValueMap:ak8PFJetsCHSSoftDropMass')
-                ak8PrunedMass[0] = jet.userFloat('ak8PFJetsCHSValueMap:ak8PFJetsCHSPrunedMass') 
+                ak8SDmass[0] = jet.userFloat('ak8PFJetsCHSValueMap:ak8PFJetsCHSSoftDropMass')
+                ak8PrunedMass[0] = jet.userFloat('ak8PFJetsCHSValueMap:ak8PFJetsCHSPrunedMass')
                 ak8PUPPImass[0] = jet.mass()
                 ak8SDPUPPImass[0] = jet.userFloat('ak8PFJetsPuppiSoftDropMass')
                 ak8SD_sub0_mass[0] = msubjet0
-		ak8SD_sub1_mass[0] = msubjet1
+                ak8SD_sub1_mass[0] = msubjet1
                 ak8SD_sub0_csv[0] = csv0
-		ak8SD_sub1_csv[0] = csv1
-		#ak8_N2_beta1[0] = jet.userFloat('ak8PFJetsPuppiSoftDropValueMap:nb1AK8PuppiSoftDropN2')
-		#ak8_N2_beta2[0] = jet.userFloat('ak8PFJetsPuppiSoftDropValueMap:nb2AK8PuppiSoftDropN2')
-		#ak8_N3_beta1[0] = jet.userFloat('ak8PFJetsPuppiSoftDropValueMap:nb1AK8PuppiSoftDropN3')
-		#ak8_N3_beta2[0] = jet.userFloat('ak8PFJetsPuppiSoftDropValueMap:nb2AK8PuppiSoftDropN3')
-		npv[0] = float(len(pvs))
-                if groomedJet != None : 
+                ak8SD_sub1_csv[0] = csv1
+                #ak8_N2_beta1[0] = jet.userFloat('ak8PFJetsPuppiSoftDropValueMap:nb1AK8PuppiSoftDropN2')
+                #ak8_N2_beta2[0] = jet.userFloat('ak8PFJetsPuppiSoftDropValueMap:nb2AK8PuppiSoftDropN2')
+                #ak8_N3_beta1[0] = jet.userFloat('ak8PFJetsPuppiSoftDropValueMap:nb1AK8PuppiSoftDropN3')
+                #ak8_N3_beta2[0] = jet.userFloat('ak8PFJetsPuppiSoftDropValueMap:nb2AK8PuppiSoftDropN3')
+                npv[0] = float(len(pvs))
+                if groomedJet != None :
                     h_ptGroomedCorrAK8.Fill( groomedJet.pt() )
                     h_msoftdropCorrAK8.Fill( groomedJet.mass() )
                     h_rhoRatioAK8.Fill( rhoRatio )
                     h_mSubjet0AK8.Fill( msubjet0 )
                     h_mSubjet1AK8.Fill( msubjet1 )
-                # Make sure there are top tags if we want to plot them 
+                # Make sure there are top tags if we want to plot them
                 tagInfoLabels = jet.tagInfoLabels()
-                hasTopTagInfo = 'caTop' in tagInfoLabels 
-                if hasTopTagInfo : 
+                hasTopTagInfo = 'caTop' in tagInfoLabels
+                if hasTopTagInfo :
                     h_minmassAK8.Fill( jet.tagInfo('caTop').properties().minMass )
                     h_nsjAK8.Fill( jet.tagInfo('caTop').properties().nSubJets )
                 else :
@@ -714,9 +713,9 @@ for ifile in files :
                     h_yAK8Gen.Fill( genJet.y() )
                     h_phiAK8Gen.Fill( genJet.phi() )
                     h_mAK8Gen.Fill( genJet.mass() )
-                    h_areaAK8Gen.Fill( genJet.jetArea() )                    
+                    h_areaAK8Gen.Fill( genJet.jetArea() )
                 if options.verbose == True :
-                    if hasTopTagInfo : 
+                    if hasTopTagInfo :
                         print 'Jet {0:4.0f}, pt = {1:10.2f}, eta = {2:6.2f}, phi = {3:6.2f}, m = {4:6.2f}, nda = {5:3.0f}, softdrop m = {6:6.2f}, pruned m = {7:6.2f}, topmass = {10:6.2f}, minmass = {11:6.2f}'.format(
                             ijet, jet.pt(), jet.eta(), jet.phi(), jet.mass(), jet.numberOfDaughters(),
                             jet.userFloat('ak8PFJetsCHSValueMap:ak8PFJetsCHSSoftDropMass'),
@@ -731,14 +730,14 @@ for ifile in files :
                             )
             ijet += 1
 
-        
 
-## _________ .__                                     
-## \_   ___ \|  |   ____ _____    ____  __ ________  
-## /    \  \/|  | _/ __ \\__  \  /    \|  |  \____ \ 
+
+## _________ .__
+## \_   ___ \|  |   ____ _____    ____  __ ________
+## /    \  \/|  | _/ __ \\__  \  /    \|  |  \____ \
 ## \     \___|  |_\  ___/ / __ \|   |  \  |  /  |_> >
-##  \______  /____/\___  >____  /___|  /____/|   __/ 
-##         \/          \/     \/     \/      |__|    
+##  \______  /____/\___  >____  /___|  /____/|   __/
+##         \/          \/     \/     \/      |__|
 f.cd()
 f.Write()
 f.Close()
