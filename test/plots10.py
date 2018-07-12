@@ -2,19 +2,19 @@ from ROOT import *
 
 gROOT.Macro("rootlogon.C")
 
-f1 = TFile("qcd_highPt.root")
+f1 = TFile("ttbar.root")
 f2 = TFile("zprime_ttbar_3000.root")
 
-h_tau32AK8_1   = f1.Get("h_tau32AK8")
-h_tau32AK8_2   = f2.Get("h_tau32AK8")
+h_tau32AK8_1 = f1.Get("h_tau32AK8")
+h_tau32AK8_2 = f2.Get("h_tau32AK8")
 
-h_tau32AK8_1    .SetLineColor(1)
-h_tau32AK8_2    .SetLineColor(2)
+h_tau32AK8_1.SetLineColor(1)
+h_tau32AK8_2.SetLineColor(2)
 
 leg = TLegend(0.3, 0.5, 0.5, 0.8)
 leg.SetFillColor(0)
 leg.SetBorderSize(0)
-leg.AddEntry( h_tau32AK8_1, "QCD", 'l')
+leg.AddEntry( h_tau32AK8_1, "t#bar{t}", 'l')
 leg.AddEntry( h_tau32AK8_2, "Z'#rightarrow t#bar{t}", 'l')
 
 h_tau32AK8_1.Sumw2()
@@ -23,8 +23,8 @@ h_tau32AK8_2.Sumw2()
 h_tau32AK8_2.Scale( 1.0 / h_tau32AK8_2.Integral() )
 
 c = TCanvas('c', 'c') 
-h_tau32AK8_1    .Draw("hist")
-h_tau32AK8_2    .Draw("same hist")
+h_tau32AK8_1.Draw("hist")
+h_tau32AK8_2.Draw("same hist")
 
 
 leg.Draw()

@@ -2,7 +2,7 @@ from ROOT import *
 
 gROOT.Macro("rootlogon.C")
 
-f = TFile("rsgluon_ttbar_3TeV.root")
+f = TFile("zprime_ttbar_3000.root")
 
 h_massAK8_1   = f.Get("h_mAK8")
 h_massAK8_2   = f.Get("h_msoftdropAK8")
