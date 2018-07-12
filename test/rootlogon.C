@@ -91,7 +91,7 @@
   // tdrStyle->SetTitleX(0); // Set the position of the title box
   // tdrStyle->SetTitleY(0.985); // Set the position of the title box
   // tdrStyle->SetTitleStyle(Style_t style = 1001);
-  // tdrStyle->SetTitleBorderSize(2);
+  tdrStyle->SetTitleBorderSize(0);
 
 // For the axis titles:
 
