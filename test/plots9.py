@@ -29,5 +29,5 @@ h_tau32AK8_2.Draw("same hist")
 
 leg.Draw()
 
-c.Print('plots10.png', 'png')
-c.Print('plots10.pdf', 'pdf')
+c.Print('plots9.png', 'png')
+c.Print('plots9.pdf', 'pdf')
