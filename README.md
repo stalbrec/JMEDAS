@@ -2,27 +2,14 @@ JMEDAS
 ======
 
 JME POG CMS Data Analysis School (CMSDAS) exercise
+Main exercise instructions: https://twiki.cern.ch/twiki/bin/view/CMS/SWGuideCMSDataAnalysisSchoolHamburg2018JetExercise
 
-
-
-`cmsrel CMSSW_8_0_25`
-
-`cd CMSSW_8_0_25/src`
-
-`git clone https://github.com/cms-jet/JMEDAS.git Analysis/JMEDAS`
-
-`git clone https://github.com/cms-jet/JetToolbox Analysis/JetToolbox -b jetToolbox_80X`
-
-`cd Analysis/JMEDAS`
-
-`scram b -j 10`
-
-`cd test`
-
-`voms-proxy-init`
-
-`python jmedas_fwlite.py --files qcdflat.txt  --outname qcdflat.root`
-
-Later in the exercise we will do:
-
-`cr ClusterWithToolboxAndMakeHistos.py`
+```
+cmsrel CMSSW_9_4_8
+cd CMSSW_9_4_8/src
+git clone https://github.com/raggleton/JMEDAS.git Analysis/JMEDAS
+cd Analysis/JMEDAS
+scram b -j 10
+cd test
+voms-proxy-init -voms cms
+```
