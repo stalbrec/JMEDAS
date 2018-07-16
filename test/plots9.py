@@ -18,8 +18,10 @@ leg.AddEntry( h_tau32AK8_1, "t#bar{t}", 'l')
 leg.AddEntry( h_tau32AK8_2, "Z'#rightarrow t#bar{t}", 'l')
 
 h_tau32AK8_1.Sumw2()
+h_tau32AK8_1.Rebin(4)
 h_tau32AK8_1.Scale( 1.0 / h_tau32AK8_1.Integral() )
 h_tau32AK8_2.Sumw2()
+h_tau32AK8_2.Rebin(4)
 h_tau32AK8_2.Scale( 1.0 / h_tau32AK8_2.Integral() )
 
 c = TCanvas('c', 'c') 
