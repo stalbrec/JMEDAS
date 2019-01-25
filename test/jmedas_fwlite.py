@@ -124,36 +124,36 @@ if options.correctJets :
 
     if not options.isData :
         vPar = ROOT.vector(ROOT.JetCorrectorParameters)()
-        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_L1FastJet_AK4PFchs.txt') )
-        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_L2Relative_AK4PFchs.txt') )
-        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_L3Absolute_AK4PFchs.txt') )
+        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V32_MC/Fall17_17Nov2017_V32_MC_L1FastJet_AK4PFchs.txt') )
+        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V32_MC/Fall17_17Nov2017_V32_MC_L2Relative_AK4PFchs.txt') )
+        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V32_MC/Fall17_17Nov2017_V32_MC_L3Absolute_AK4PFchs.txt') )
         jec = ROOT.FactorizedJetCorrector( vPar )
-        jecUnc = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_Uncertainty_AK4PFchs.txt' )
+        jecUnc = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017_V32_MC/Fall17_17Nov2017_V32_MC_Uncertainty_AK4PFchs.txt' )
 
         vParAK8 = ROOT.vector(ROOT.JetCorrectorParameters)()
-        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_L1FastJet_AK8PFPuppi.txt') )
-        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_L2Relative_AK8PFPuppi.txt') )
-        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_L3Absolute_AK8PFPuppi.txt') )
+        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V32_MC/Fall17_17Nov2017_V32_MC_L1FastJet_AK8PFPuppi.txt') )
+        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V32_MC/Fall17_17Nov2017_V32_MC_L2Relative_AK8PFPuppi.txt') )
+        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017_V32_MC/Fall17_17Nov2017_V32_MC_L3Absolute_AK8PFPuppi.txt') )
         jecAK8 = ROOT.FactorizedJetCorrector( vParAK8 )
-        jecUncAK8 = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017_V6_MC/Fall17_17Nov2017_V6_MC_Uncertainty_AK8PFPuppi.txt' )
+        jecUncAK8 = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017_V32_MC/Fall17_17Nov2017_V32_MC_Uncertainty_AK8PFPuppi.txt' )
 
     else :
         vPar = ROOT.vector(ROOT.JetCorrectorParameters)()
         # Not perfect - JECS are era-dependent, we've just picked Run2017B here
-        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_L1FastJet_AK4PFchs.txt') )
-        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_L2Relative_AK4PFchs.txt') )
-        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_L3Absolute_AK4PFchs.txt') )
-        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_L2L3Residual_AK4PFchs.txt') ) # Need residual correction for data
+        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_L1FastJet_AK4PFchs.txt') )
+        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_L2Relative_AK4PFchs.txt') )
+        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_L3Absolute_AK4PFchs.txt') )
+        vPar.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_L2L3Residual_AK4PFchs.txt') ) # Need residual correction for data
         jec = ROOT.FactorizedJetCorrector( vPar )
-        jecUnc = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_Uncertainty_AK4PFchs.txt' )
+        jecUnc = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_Uncertainty_AK4PFchs.txt' )
 
         vParAK8 = ROOT.vector(ROOT.JetCorrectorParameters)()
-        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_L1FastJet_AK8Puppi.txt') )
-        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_L2Relative_AK8Puppi.txt') )
-        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_L3Absolute_AK8Puppi.txt') )
-        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_L2L3Residual_AK8Puppi.txt') ) # Need residual correction for data
+        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_L1FastJet_AK8Puppi.txt') )
+        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_L2Relative_AK8Puppi.txt') )
+        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_L3Absolute_AK8Puppi.txt') )
+        vParAK8.push_back( ROOT.JetCorrectorParameters('../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_L2L3Residual_AK8Puppi.txt') ) # Need residual correction for data
         jecAK8 = ROOT.FactorizedJetCorrector( vParAK8 )
-        jecUncAK8 = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017B_V6_DATA/Fall17_17Nov2017B_V6_DATA_Uncertainty_AK8Puppi.txt' )
+        jecUncAK8 = ROOT.JetCorrectionUncertainty( '../data/JECs/Fall17_17Nov2017B_V32_DATA/Fall17_17Nov2017B_V32_DATA_Uncertainty_AK8Puppi.txt' )
 
 
 ##   ___ ___ .__          __
